@@ -1,0 +1,53 @@
+---
+brew_taps:
+  - homebrew/cask-fonts
+
+brew_packages:
+  - gh
+  - grep
+  - ansible
+  - tig
+  - stow
+  - fzf
+  - htop
+  - node
+  - python
+  - ripgrep
+  - neovim
+  - ansible
+  - exa
+  - go
+  - htop
+  - jq
+  - nmap
+  - ruby
+  - tmux
+  - wget
+  - zsh
+
+cask_packages:
+  - 1password
+  - docker
+  - font-hack-nerd-font
+  - google-chrome
+  - iterm2
+  - slack
+  - rambox
+  - postman
+  - brave-browser
+  - vial
+  - spectacle
+  - shureplus-motiv
+
+mas_packages:
+  - 937984704  # Amphetamine
+
+npm_packages:
+  - yarn
+  - eslint
+  - typescript-language-server
+  - typescript
+  - prettier
+
+pip_packages:
+  - docker
