@@ -42,8 +42,8 @@
     - role: ssh
       tags: ["ssh"]
 
-    - role: dotfiles
-      tags: ["dotfiles"]
-
     - role: zsh
       tags: ["zsh"]
+
+    - role: dotfiles
+      tags: ["dotfiles"]
