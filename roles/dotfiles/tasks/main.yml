@@ -1,8 +1,8 @@
 ---
-- name: Installing stow
+- name: "Installing stow"
   tags:
     - dotfiles
-- name: Cloning .dotfiles
+- name: "Cloning .dotfiles"
   ansible.builtin.git:
     repo: 'git@github.com:Beargruug/.dotfiles.git'
     dest: "~/.dotfiles"
@@ -12,7 +12,7 @@
     version: main
   tags:
     - dotfiles
-- name: Stow dotfiles
+- name: "Stow dotfiles"
   shell: cd ~/.dotfiles && ./macos && ./install
   tags:
     - install
