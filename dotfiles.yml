@@ -39,9 +39,6 @@
     - role: docker
       tags: ["docker"]
 
-    - role: ssh
-      tags: ["ssh"]
-
     - role: zsh
       tags: ["zsh"]
 
