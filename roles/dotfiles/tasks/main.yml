@@ -1,10 +1,7 @@
 ---
 - name: Installing stow
   apt: name=stow
-  tags:
-    - install
     - dotfiles
-    - stow
 - name: Cloning .dotfiles
   ansible.builtin.git:
     repo: 'git@github.com:Beargruug/.dotfiles.git'
@@ -14,9 +11,7 @@
     accept_hostkey: yes
     version: main
   tags:
-    - install
     - dotfiles
-    - stow
 - name: Stow dotfiles
   shell: cd ~/.dotfiles && ./macos && ./install
   tags:

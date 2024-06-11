@@ -5,7 +5,6 @@ brew_taps:
 brew_packages:
   - gh
   - grep
-  - ansible
   - tig
   - stow
   - fzf
@@ -14,7 +13,6 @@ brew_packages:
   - python
   - ripgrep
   - neovim
-  - ansible
   - exa
   - go
   - htop
