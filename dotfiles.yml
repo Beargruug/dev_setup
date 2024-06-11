@@ -3,9 +3,6 @@
   hosts: local
 
   vars_files: ["config.defaults.yml"]
-  vars:
-    source_key: "./.ssh/id_rsa"
-    dest_key: "{{ lookup('env', '$HOME') }}/.ssh/id_rsa"
 
   pre_tasks:
     - name: "[﬒ dotfiles] Include config.yml overrides"
