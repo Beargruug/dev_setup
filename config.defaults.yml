@@ -11,6 +11,7 @@ brew_packages:
   - htop
   - node
   - python
+  - python3
   - ripgrep
   - neovim
   - exa
