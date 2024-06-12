@@ -1,7 +1,8 @@
 ---
-- name: "Installing stow"
-  tags:
-    - dotfiles
+- name: "Include main vars"
+  include_vars:
+    dir: vars
+    files_matching: vars.yml
 - name: "Cloning .dotfiles"
   ansible.builtin.git:
     repo: 'git@github.com:Beargruug/.dotfiles.git'
