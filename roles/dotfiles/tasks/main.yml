@@ -1,12 +1,12 @@
 ---
 - name: "Include main vars"
   ansible.builtin.include_vars:
-    dir: vars
-    files_matching: vars.yml
+    file: vars.yml
 
 - name: "Cloning .dotfiles"
   ansible.builtin.git:
     repo: 'git@github.com:Beargruug/.dotfiles.git'
+    key_file: "{{ ssh_key_filename }}"
     dest: "~/.dotfiles"
     recursive: yes
     update: yes
