@@ -5,8 +5,7 @@
 
 - name: "Cloning .dotfiles"
   ansible.builtin.git:
-    repo: 'git@github.com:Beargruug/.dotfiles.git'
-    key_file: "{{ ssh_key_filename }}"
+    repo: 'https://github.com/Beargruug/.dotfiles.git'
     dest: "~/.dotfiles"
     recursive: yes
     update: yes
