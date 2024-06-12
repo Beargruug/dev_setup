@@ -1,21 +1,20 @@
----
-- name: "Include main vars"
-  include_vars:
-    dir: vars
-    files_matching: vars.yml
-- name: "Cloning .dotfiles"
-  ansible.builtin.git:
-    repo: 'git@github.com:Beargruug/.dotfiles.git'
-    dest: "~/.dotfiles"
-    recursive: yes
-    update: yes
-    accept_hostkey: yes
-    version: main
-  tags:
-    - dotfiles
-- name: "Stow dotfiles"
-  shell: cd ~/.dotfiles && ./macos && ./install
-  tags:
-    - install
-    - dotfiles
-    - stow
+- hosts: localhost
+  tasks:
+
+  - name: Include main vars
+    ansible.builtin.include_vars:
+      file: vars.yml
+
+  - name: "Cloning dotfiles"
+    ansible.builtin.git:
+      repo: 'git@github.com:Beargruug/.dotfiles.git'
+      dest: "~/.dotfiles"
+      recursive: yes
+      update: yes
+      accept_hostkey: yes
+      version: main
+    tags:
+      - dotfiles
+
+  - name: "Stow dotfiles"
+    shell: cd ~/.dotfiles && ./macos && ./install
