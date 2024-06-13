@@ -17,6 +17,5 @@
 - name: "Stow dotfiles"
   shell: cd ~/.dotfiles && ./macos && ./install
   tags:
-    - install
     - dotfiles
     - stow
