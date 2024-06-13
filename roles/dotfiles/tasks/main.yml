@@ -10,6 +10,7 @@
     recursive: yes
     update: yes
     accept_hostkey: yes
+    key_file: "{{ ssh_key }}"
     version: main
   tags:
     - dotfiles
