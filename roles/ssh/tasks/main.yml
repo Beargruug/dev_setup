@@ -1,5 +1,5 @@
 - name: Setup ssh keys on system
 
 - name: Change shell to zsh
-  shell: cp ./files/ssh_keys/* ~/.ssh/
+  shell: cp ./files/ssh_keys/* ~/.ssh/ && chmod 600 ~/.ssh/* && chmod 644 ~/.ssh/*.pub
 
