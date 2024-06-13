@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-# Check if "ansible" binary is available in $PATH
-if ! [ -x "$(command -v ansible)" ]; then
-  echo "Ansible missing - please install manually:"
-  echo
-  echo "$ sudo pip3 install --upgrade pip"
-  echo "$ pip3 install ansible"
-  exit 1
-fi
 
 # Check if --bootstrap switch is supplied, if so use "all" tags
 if [ "${1}" == "--bootstrap" ]; then
@@ -16,6 +8,15 @@ if [ "${1}" == "--bootstrap" ]; then
 else
   # Otherwise, use value from 1st argument, defaulting to "dotfiles"
   tags="${1:-dotfiles}"
+fi
+
+# Check if "ansible" binary is available in $PATH
+if ! [ -x "$(command -v ansible)" ]; then
+  echo "Ansible missing - please install manually:"
+  echo
+  echo "$ sudo pip3 install --upgrade pip"
+  echo "$ pip3 install ansible"
+  exit 1
 fi
 
 # Get full directory path of this wrapper
