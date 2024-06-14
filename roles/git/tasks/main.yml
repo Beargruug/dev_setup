@@ -1,0 +1,25 @@
+---
+- name: Include main vars
+  ansible.builtin.include_vars:
+    file: vars.yml
+
+- name: Add user to docker group
+  become: true
+  ansible.builtin.user:
+    name: "{{ username }}"
+    groups: docker
+    append: true
+
+- name: user.name for git config
+  become_user: "{{ username }}"
+  community.general.git_config:
+    name: user.name
+    scope: global
+    value: "{{ username }}"
+
+- name: user.email for git config
+  become_user: "{{ username }}"
+  community.general.git_config:
+    name: user.email
+    scope: global
+    value: "{{ email }}"
