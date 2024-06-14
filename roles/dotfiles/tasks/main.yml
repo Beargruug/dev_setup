@@ -21,6 +21,12 @@
     - dotfiles
     - stow
 
+- name: "Add personal folder to dotfiles"
+  shell: cd ~/.dotfiles && mkdir personal
+  tags:
+    - dotfiles
+    - stow
+
 - name: "Stow dotfiles"
   shell: cd ~/.dotfiles && ./macos
   tags:
