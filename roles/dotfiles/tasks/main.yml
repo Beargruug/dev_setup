@@ -15,6 +15,12 @@
   tags:
     - dotfiles
 
+- name: "Permissions for dotfiles"
+  shell: cd ~/.dotfiles && chmod 755 ./macos && chmod 755./install
+  tags:
+    - dotfiles
+    - stow
+
 - name: "Stow dotfiles"
   shell: cd ~/.dotfiles && ./macos && ./install
   tags:
