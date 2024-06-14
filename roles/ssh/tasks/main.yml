@@ -3,3 +3,5 @@
 - name: Change shell to zsh
   shell: cp ./files/ssh_keys/* ~/.ssh/ && chmod 600 ~/.ssh/* && chmod 644 ~/.ssh/*.pub
 
+- name: Decrypt the ssh keys
+  shell: ansible-vault decrypt ~/.ssh/id_beargruug_rsa
