@@ -16,7 +16,7 @@
     - dotfiles
 
 - name: "Permissions for dotfiles"
-  shell: cd ~/.dotfiles && sudo chmod 755 ./macos && chmod 755./install
+  shell: cd ~/.dotfiles && sudo chmod 755 ./macos && chmod 755 ./install
   tags:
     - dotfiles
     - stow
