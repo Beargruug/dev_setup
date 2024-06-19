@@ -6,6 +6,7 @@ brew_packages:
   - ansible
   - git
   - docker
+  - docker-compose
   - grep
   - tig
   - stow
