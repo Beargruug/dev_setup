@@ -1,47 +1,13 @@
-    - hosts: all
-      vars:
-        macos_dock:
-          reset: true
-          applications:
-            add: [
-              { name: "Finder", path: "/Applications/Google Chrome.app", pos: 1 },
-              { name: "Launchpad", path: "/Applications/Google Chrome.app", pos: 2 },
-              { name: "Brave", path: "/Applications/Google Chrome.app", pos: 3 },
-              { name: "iTerm", path: "/Applications/Google Chrome.app", pos: 4 },
-              { name: "Calendar", path: "/Applications/Google Chrome.app", pos: 5 },
-              { name: "Rambox", path: "/Applications/Google Chrome.app", pos: 6 },
-              { name: "Slack", path: "/Applications/Google Chrome.app", pos: 7 },
-              { name: "Mail", path: "/Applications/Google Chrome.app", pos: 8 },
-              { name: "Notes", path: "/Applications/Google Chrome.app", pos: 9 },
-            ]
-            remove: [
-            ]
-          folder:
-            add: [
-            ]
-            remove: [
-            ]
-          url:
-            add: [
-            ]
-            remove: [
-            ]
-          settings:
-            spring_load: true
-            expose_animation_duration: 0.12
-            expose_group_by_app: true
-            transparent: true
-            minimize_to_application: true
-            mouse_over_hilite_stack: true
-            rearrange_spaces: false
-            process_indicators: true
-            show_hidden: true
-            tile_size: 36
-            bottom_right_corner: 2
-            bottom_right_modifier: 0
-            top_left_corner: 5
-            top_left_modifier: 0
-            dashboard_in_overlay: true
-            magnification: true
-      roles:
-        - { role: feffi.macos-dock }
+---
+- name: Remove all crap from Dock
+  shell: dockutil --remove '{{ item }}'
+  ignore_errors: true
+  with_items: dockitems_to_remove
+
+- name: Check if items in dock exist
+  shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
+  with_items: dockitems_to_persist
+
+- name: Fix order
+  shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
+  with_items: dockitems_to_persist

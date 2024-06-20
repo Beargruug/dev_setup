@@ -52,3 +52,40 @@ npm_packages:
 
 pip_packages:
   - docker
+
+dockitems_to_remove:
+  - Safari
+  - Reminders
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - App Store
+  - System Preferences
+
+dockitems_to_persist:
+  - name: Finder
+    path: "/Applications/Finder.app"
+    pos: 1
+  - name: Launchpad
+    path: "/Applications/Launchpad.app"
+    pos: 2
+  - name: Brave
+    path: "/Applications/Brave.app"
+    pos: 3
+  - name: Iterm2
+    path: /Applications/iTerm.app
+    pos: 4
+  - name: Calendar
+    path: /Applications/Calendar.app
+    pos: 5
+  - name: Rambox
+    path: /Applications/Rambox.app
+    pos: 6
+  - name: Mail
+    path: /Applications/Mail.app
+    pos: 7
+  - name: Notes
+    path: /Applications/Notes.app
+    pos: 8
