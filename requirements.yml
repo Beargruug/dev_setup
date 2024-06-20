@@ -1,5 +1,4 @@
 ---
 collections:
   - name: geerlingguy.mac
-  - src: https://github.com/feffi/ansible-macos-dock.git
-    name: feffi.macos-dock
+  - name: feffi.macos-dock
