@@ -66,16 +66,13 @@ dockitems_to_remove:
   - System Preferences
 
 dockitems_to_persist:
-  - name: Finder
-    path: "/Applications/Finder.app"
-    pos: 1
   - name: Launchpad
     path: "/Applications/Launchpad.app"
     pos: 2
-  - name: Brave
-    path: "/Applications/Brave.app"
+  - name: Brave Browser
+    path: "/Applications/Brave Browser.app"
     pos: 3
-  - name: Iterm2
+  - name: iTerm
     path: /Applications/iTerm.app
     pos: 4
   - name: Calendar
@@ -90,3 +87,6 @@ dockitems_to_persist:
   - name: Notes
     path: /Applications/Notes.app
     pos: 8
+  - name: ShurePlus MOTIV
+    path: /Applications/ShurePlus MOTIV.app
+    pos: 9

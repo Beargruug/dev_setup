@@ -3,11 +3,12 @@
   shell: dockutil --remove '{{ item }}'
   ignore_errors: true
   with_items: dockitems_to_remove
+  loop: "{{ dockitems_to_remove }}"
 
 - name: Check if items in dock exist
   shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
-  with_items: dockitems_to_persist
+  loop: "{{ dockitems_to_persist }}"
 
 - name: Fix order
   shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
-  with_items: dockitems_to_persist
+  loop: "{{ dockitems_to_persist }}"
