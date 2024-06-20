@@ -68,25 +68,25 @@ dockitems_to_remove:
 dockitems_to_persist:
   - name: Launchpad
     path: "/Applications/Launchpad.app"
-    pos: 2
+    pos: 1
   - name: Brave Browser
     path: "/Applications/Brave Browser.app"
+    pos: 2
+  - name: Calendar
+    path: /Applications/Calendar.app
     pos: 3
   - name: iTerm
     path: /Applications/iTerm.app
     pos: 4
-  - name: Calendar
-    path: /Applications/Calendar.app
-    pos: 5
   - name: Rambox
     path: /Applications/Rambox.app
-    pos: 6
+    pos: 5
   - name: Mail
     path: /Applications/Mail.app
-    pos: 7
+    pos: 6
   - name: Notes
     path: /Applications/Notes.app
-    pos: 8
+    pos: 7
   - name: ShurePlus MOTIV
     path: /Applications/ShurePlus MOTIV.app
-    pos: 9
+    pos: 8
