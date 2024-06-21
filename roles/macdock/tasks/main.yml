@@ -1,4 +1,36 @@
 ---
+- name: Close any open System Preferences panes
+  shell: osascript -e 'tell application "System Preferences" to quit'
+  changed_when: false
+
+- name: Set whether the Dock automatically hides
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: "{{ macos_dock_autohide }}"
+
+- name: Set the icon size of Dock items
+  osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: "{{ macos_dock_icon_size }}"
+
+- name: Set last used applications in Dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: show-recents
+    type: bool
+    value: "{{ macos_dock_show_recents }}"
+
+- name: Set Dock orientation
+  osx_defaults:
+    domain: com.apple.dock
+    key: orientation
+    type: string
+    value: "{{ macos_dock_orientation }}"
+
 - name: Remove all crap from Dock
   shell: dockutil --remove '{{ item }}'
   ignore_errors: true

@@ -65,6 +65,11 @@ dockitems_to_remove:
   - App Store
   - Systemeinstellungen
 
+macos_dock_autohide: true
+macos_dock_icon_size: 36
+macos_dock_orientation: bottom
+macos_dock_show_recents: false
+
 dockitems_to_persist:
   - name: Launchpad
     path: "/Applications/Launchpad.app"
