@@ -72,7 +72,7 @@ dockitems_to_persist:
   - name: Brave Browser
     path: "/Applications/Brave Browser.app"
     pos: 2
-  - name: Calendar
+  - name: Kalender
     path: /Applications/Calendar.app
     pos: 3
   - name: iTerm
@@ -87,7 +87,7 @@ dockitems_to_persist:
   - name: Mail
     path: /Applications/Mail.app
     pos: 7
-  - name: Notes
+  - name: Notizen
     path: /Applications/Notes.app
     pos: 8
   - name: ShurePlus MOTIV
