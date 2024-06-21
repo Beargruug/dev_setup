@@ -78,15 +78,18 @@ dockitems_to_persist:
   - name: iTerm
     path: /Applications/iTerm.app
     pos: 4
+  - name: 1Password
+    path: /Applications/1Password.app
+    pos: 5
   - name: Rambox
     path: /Applications/Rambox.app
-    pos: 5
+    pos: 6
   - name: Mail
     path: /Applications/Mail.app
-    pos: 6
+    pos: 7
   - name: Notes
     path: /Applications/Notes.app
-    pos: 7
+    pos: 8
   - name: ShurePlus MOTIV
     path: /Applications/ShurePlus MOTIV.app
-    pos: 8
+    pos: 9
