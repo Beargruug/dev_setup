@@ -56,14 +56,14 @@ pip_packages:
 
 dockitems_to_remove:
   - Safari
-  - Reminders
-  - Photos
-  - Messages
+  - Erinnerungen
+  - Fotos
+  - Nachrichten
   - FaceTime
   - iTunes
   - iBooks
   - App Store
-  - System Preferences
+  - Systemeinstellungen
 
 dockitems_to_persist:
   - name: Launchpad
