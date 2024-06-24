@@ -1,15 +1,18 @@
 ---
 - name: "[ homebrew] Configure Homebrew taps"
+  tags: homebrew
   homebrew_tap:
     name: "{{ item }}"
   loop: "{{ brew_taps }}"
 
 - name: "[ homebrew] Install Homebrew formulae"
+  tags: homebrew
   homebrew:
     name: "{{ item }}"
   loop: "{{ brew_packages }}"
 
 - name: "[ homebrew] Install Homebrew casks"
+  tags: homebrew
   homebrew_cask:
     name: "{{ item }}"
   loop: "{{ cask_packages }}"
