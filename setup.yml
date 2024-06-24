@@ -5,7 +5,7 @@
   vars_files: ["config.defaults.yml", "vars.yml"]
 
   pre_tasks:
-    - name: "[﬒ dotfiles] Include config.yml overrides"
+    - name: "Include config.yml overrides"
       include_vars: "{{ item }}"
       with_fileglob: "{{ playbook_dir }}/config.yml"
       tags: ["always"]
@@ -36,18 +36,18 @@
     - role: docker
       tags: ["docker"]
 
-    - role: git
-      tags: ["git"]
-
     - role: ssh
       tags: ["ssh"]
+
+    - role: git
+      tags: ["git"]
 
     - role: zsh
       tags: ["zsh"]
 
+    - role: dotfiles
+      tags: ["dotfiles"]
+
     - role: macdock
       tags: ["macdock"]
       when: ansible_distribution == 'MacOSX'
-
-    - role: dotfiles
-      tags: ["dotfiles"]
