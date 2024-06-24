@@ -1,6 +1,16 @@
 ---
 - name: "[ npm] Install global npm packages"
-  npm:
-    name: "{{ item }}"
-    global: true
-  loop: "{{ npm_packages }}"
+  hosts: localhost
+  tasks:
+    - name: Check if npm package is already installed
+      command: npm list -g --depth=0 {{ item }}
+      register: npm_check
+      ignore_errors: true
+      changed_when: false
+
+    - name: Install npm package globally if not installed
+      npm:
+        name: "{{ item }}"
+        global: true
+      when: npm_check.rc != 0
+      loop: "{{ npm_packages }}"
