@@ -11,8 +11,8 @@ fi
 
 # Check if "ansible" binary is available in $PATH
 if ! [ -x "$(command -v ansible)" ]; then
-  echo "Ansible missing - please install manually"
-  exit 1
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew install ansible
 fi
 
 # Get full directory path of this wrapper
