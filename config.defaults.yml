@@ -37,21 +37,11 @@ cask_packages:
   - postman
   - brave-browser
   - vial
-  - spectacle
+  - rectangle
   - shureplus-motiv
 
 mas_packages:
   - 937984704  # Amphetamine
-
-npm_packages:
-  - yarn
-  - eslint
-  - typescript-language-server
-  - typescript
-  - prettier
-
-pip_packages:
-  - docker
 
 dockitems_to_remove:
   - Safari
