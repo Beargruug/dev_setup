@@ -6,6 +6,7 @@ brew_packages:
   - git
   - docker
   - docker-compose
+  - mas
   - dockutil
   - grep
   - tig
