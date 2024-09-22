@@ -1,5 +1,5 @@
 username: "beargruug"
 email: "info@fabianmail.com"
-ssh_key: "~/.ssh/id_beargruug_rsa"
-ssh_key_filename: "id_beargruug_rsa"
+ssh_key: "~/.ssh/id_beargruug"
+ssh_key_filename: "id_beargruug"
 personal: "{{ $HOME }}/personal"

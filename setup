@@ -5,24 +5,26 @@ set -e
 if [ "${1}" == "--awesome" ]; then
   tags="all"
 elif [ "${1}" == "--homebrew" ]; then
-  tags="${1:-homebrew}"
+  tags="homebrew"
 elif [ "${1}" == "--docker" ]; then
-  tags="${1:-docker}"
+  tags="docker"
 elif [ "${1}" == "--git" ]; then
-  tags="${1:-git}"
+  tags="git"
 elif [ "${1}" == "--macdock" ]; then
-  tags="${1:-macdock}"
+  tags="macdock"
 elif [ "${1}" == "--macos" ]; then
-  tags="${1:-macos}"
+  tags="macos"
 elif [ "${1}" == "--mas" ]; then
-  tags="${1:-mas}"
+  tags="mas"
 elif [ "${1}" == "--ssh" ]; then
-  tags="${1:-ssh}"
+  tags="ssh"
 elif [ "${1}" == "--zsh" ]; then
-  tags="${1:-zsh}"
-else
-  # Otherwise, use value from 1st argument, defaulting to "dotfiles"
-  tags="${1:-dotfiles}"
+  tags="zsh"
+elif [ "${1}" == "--dotfiles" ]; then
+  tags="dotfiles"
+# else
+#   # Otherwise, use value from 1st argument, defaulting to "dotfiles"
+#   tags="${1:-dotfiles}"
 fi
 
 # Check if "ansible" binary is available in $PATH
