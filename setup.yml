@@ -11,25 +11,6 @@
       tags: ["always"]
 
   roles:
-    - role: geerlingguy.mac.homebrew
-      tags: ["brew"]
-      when: ansible_distribution == 'MacOSX'
-
-    - role: brew
-      tags: ["brew"]
-      when: ansible_distribution == 'MacOSX'
-
-    - role: mas
-      tags: ["mas"]
-      when: ansible_distribution == 'MacOSX'
-
-    - role: macos
-      tags: ["macos"]
-      when: ansible_distribution == 'MacOSX'
-
-    - role: docker
-      tags: ["docker"]
-
     - role: ssh
       tags: ["ssh"]
 
@@ -41,6 +22,25 @@
 
     - role: dotfiles
       tags: ["dotfiles"]
+
+    - role: docker
+      tags: ["docker"]
+
+    - role: macos
+      tags: ["macos"]
+      when: ansible_distribution == 'MacOSX'
+
+    - role: geerlingguy.mac.homebrew
+      tags: ["brew"]
+      when: ansible_distribution == 'MacOSX'
+
+    - role: brew
+      tags: ["brew"]
+      when: ansible_distribution == 'MacOSX'
+
+    - role: mas
+      tags: ["mas"]
+      when: ansible_distribution == 'MacOSX'
 
     - role: macdock
       tags: ["macdock"]
