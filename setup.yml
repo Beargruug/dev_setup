@@ -23,9 +23,6 @@
     - role: dotfiles
       tags: ["dotfiles"]
 
-    - role: docker
-      tags: ["docker"]
-
     - role: macos
       tags: ["macos"]
       when: ansible_distribution == 'MacOSX'
