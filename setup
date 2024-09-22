@@ -4,6 +4,22 @@ set -e
 # Check if --awesome switch is supplied, if so use "all" tags
 if [ "${1}" == "--awesome" ]; then
   tags="all"
+elif [ "${1}" == "--brew" ]; then
+  tags="${1:-brew}"
+elif [ "${1}" == "--docker" ]; then
+  tags="${1:-docker}"
+elif [ "${1}" == "--git" ]; then
+  tags="${1:-git}"
+elif [ "${1}" == "--macdock" ]; then
+  tags="${1:-macdock}"
+elif [ "${1}" == "--macos" ]; then
+  tags="${1:-macos}"
+elif [ "${1}" == "--mas" ]; then
+  tags="${1:-mas}"
+elif [ "${1}" == "--ssh" ]; then
+  tags="${1:-ssh}"
+elif [ "${1}" == "--zsh" ]; then
+  tags="${1:-zsh}"
 else
   # Otherwise, use value from 1st argument, defaulting to "dotfiles"
   tags="${1:-dotfiles}"
