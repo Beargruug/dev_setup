@@ -28,7 +28,6 @@ brew_packages:
 
 cask_packages:
   - 1password
-  - docker
   - font-hack-nerd-font
   - google-chrome
   - iterm2
