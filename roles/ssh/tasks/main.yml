@@ -1,5 +1,7 @@
 - name: Setup ssh keys on system
+  tags: ssh
   shell: cp ./files/ssh_keys/* ~/.ssh/ && chmod 600 ~/.ssh/* && chmod 644 ~/.ssh/*.pub
 
 - name: Decrypt the ssh keys
+  tags: ssh
   shell: ansible-vault decrypt ~/.ssh/id_beargruug

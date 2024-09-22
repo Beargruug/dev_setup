@@ -4,8 +4,8 @@ set -e
 # Check if --awesome switch is supplied, if so use "all" tags
 if [ "${1}" == "--awesome" ]; then
   tags="all"
-elif [ "${1}" == "--brew" ]; then
-  tags="${1:-brew}"
+elif [ "${1}" == "--homebrew" ]; then
+  tags="${1:-homebrew}"
 elif [ "${1}" == "--docker" ]; then
   tags="${1:-docker}"
 elif [ "${1}" == "--git" ]; then

@@ -1,9 +1,11 @@
 ---
 - name: Include main vars
+  tags: git
   ansible.builtin.include_vars:
     file: vars.yml
 
 - name: user.name for git config
+  tags: git
   become_user: "{{ username }}"
   community.general.git_config:
     name: user.name
@@ -11,6 +13,7 @@
     value: "{{ username }}"
 
 - name: user.email for git config
+  tags: git
   become_user: "{{ username }}"
   community.general.git_config:
     name: user.email

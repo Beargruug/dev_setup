@@ -1,5 +1,6 @@
 ---
 - name: "[ macOS] Disable press-and-hold for keys in favor of key repeat"
+  tags: macos
   osx_defaults:
     domain: NSGlobalDomain
     key: ApplePressAndHoldEnabled
@@ -8,6 +9,7 @@
     state: present
 
 - name: "[ macOS] Set a blazingly fast keyboard repeat rate"
+  tags: macos
   osx_defaults:
     domain: NSGlobalDomain
     key: KeyRepeat
@@ -16,6 +18,7 @@
     state: present
 
 - name: "[ macOS] Set a short keyboard repeat rate delay"
+  tags: macos
   osx_defaults:
     domain: NSGlobalDomain
     key: InitialKeyRepeat
@@ -24,6 +27,7 @@
     state: present
 
 - name: "[ macOS] Increase speed of trackpad cursor movement"
+  tags: macos
   osx_defaults:
     domain: NSGlobalDomain
     key: com.apple.trackpad.scaling
@@ -32,6 +36,7 @@
     state: present
 
 - name: "[ macOS] iterm2 - Specify the preferences directory"
+  tags: macos
   osx_defaults:
     domain: com.googlecode.iterm2.plist
     key: PrefsCustomFolder
@@ -40,6 +45,7 @@
     state: present
 
 - name: "[ macOS] iterm2 - Use the custom preferences in the directory"
+  tags: macos
   osx_defaults:
     domain: com.googlecode.iterm2.plist
     key: LoadPrefsFromCustomFolder

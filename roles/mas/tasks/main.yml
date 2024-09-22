@@ -1,5 +1,6 @@
 ---
 - name: "[ mas] Install Mac App Store packages"
+  tags: mas
   mas:
     id: "{{ item }}"
     state: present
