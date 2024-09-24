@@ -6,6 +6,8 @@ if [ "${1}" == "--awesome" ]; then
   tags="all"
 elif [ "${1}" == "--homebrew" ]; then
   tags="homebrew"
+elif [ "${1}" == "--caskbrew" ]; then
+  tags="caskbrew"
 elif [ "${1}" == "--docker" ]; then
   tags="docker"
 elif [ "${1}" == "--git" ]; then

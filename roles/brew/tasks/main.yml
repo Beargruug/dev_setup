@@ -16,6 +16,7 @@
 - name: "[ homebrew] Install Homebrew casks"
   tags:
     - homebrew
+    - caskbrew
   homebrew_cask:
     name: "{{ item }}"
   loop: "{{ cask_packages }}"
