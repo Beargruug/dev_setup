@@ -1,7 +1,4 @@
 ---
-brew_taps:
-  - homebrew/cask-fonts
-
 brew_packages:
   - git
   - docker
@@ -17,8 +14,9 @@ brew_packages:
   - python
   - ripgrep
   - neovim
-  - exa
+  - eza
   - go
+  - lazydocker
   - htop
   - jq
   - nmap
@@ -29,15 +27,13 @@ brew_packages:
 
 cask_packages:
   - 1password
-  - font-hack-nerd-font
   - google-chrome
-  - iterm2
   - slack
   - rambox
   - postman
   - brave-browser
   - vial
-  - rectangle
+  - raycast
   - shureplus-motiv
 
 mas_packages:
@@ -69,8 +65,8 @@ dockitems_to_persist:
   - name: Kalender
     path: /Applications/Calendar.app
     pos: 3
-  - name: iTerm
-    path: /Applications/iTerm.app
+  - name: Ghostty
+    path: /Applications/Ghostty.app
     pos: 4
   - name: 1Password
     path: /Applications/1Password.app
@@ -87,3 +83,6 @@ dockitems_to_persist:
   - name: ShurePlus MOTIV
     path: /Applications/ShurePlus MOTIV.app
     pos: 9
+  - name: Insta360 Link Controller
+    path: /Applications/Insta360 Link Controller.app
+    pos: 10
