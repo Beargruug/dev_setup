@@ -34,10 +34,8 @@ cask_packages:
   - brave-browser
   - vial
   - raycast
+  - ghostty
   - shureplus-motiv
-
-mas_packages:
-  - 937984704  # Amphetamine
 
 dockitems_to_remove:
   - Safari
@@ -65,24 +63,21 @@ dockitems_to_persist:
   - name: Kalender
     path: /Applications/Calendar.app
     pos: 3
+  - name: Slack
+    path: "/Applications/Slack.app"
+    pos: 4
   - name: Ghostty
     path: /Applications/Ghostty.app
-    pos: 4
+    pos: 5
   - name: 1Password
     path: /Applications/1Password.app
-    pos: 5
+    pos: 6
   - name: Rambox
     path: /Applications/Rambox.app
-    pos: 6
+    pos: 7
   - name: Mail
     path: /Applications/Mail.app
-    pos: 7
+    pos: 8
   - name: Notizen
     path: /Applications/Notes.app
-    pos: 8
-  - name: ShurePlus MOTIV
-    path: /Applications/ShurePlus MOTIV.app
     pos: 9
-  - name: Insta360 Link Controller
-    path: /Applications/Insta360 Link Controller.app
-    pos: 10

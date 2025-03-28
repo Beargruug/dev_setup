@@ -3,52 +3,45 @@
   tags: macdock
   shell: osascript -e 'tell application "System Preferences" to quit'
   changed_when: false
-
 - name: Set whether the Dock automatically hides
   tags: macdock
   osx_defaults:
     domain: com.apple.dock
     key: autohide
     type: bool
-    value: "{{ macos_dock_autohide }}"
-
+    value: '{{ macos_dock_autohide }}'
 - name: Set the icon size of Dock items
   tags: macdock
   osx_defaults:
     domain: com.apple.dock
     key: tilesize
     type: float
-    value: "{{ macos_dock_icon_size }}"
-
+    value: '{{ macos_dock_icon_size }}'
 - name: Set last used applications in Dock
   tags: macdock
   osx_defaults:
     domain: com.apple.dock
     key: show-recents
     type: bool
-    value: "{{ macos_dock_show_recents }}"
-
+    value: '{{ macos_dock_show_recents }}'
 - name: Set Dock orientation
   tags: macdock
   osx_defaults:
     domain: com.apple.dock
     key: orientation
     type: string
-    value: "{{ macos_dock_orientation }}"
-
+    value: '{{ macos_dock_orientation }}'
 - name: Remove all crap from Dock
   tags: macdock
   shell: dockutil --remove '{{ item }}'
   ignore_errors: true
-  with_items: dockitems_to_remove
-  loop: "{{ dockitems_to_remove }}"
-
+  with_items: '{{ dockitems_to_remove }}'
+  loop: '{{ dockitems_to_remove }}'
 - name: Check if items in dock exist
   tags: macdock
   shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
-  loop: "{{ dockitems_to_persist }}"
-
+  loop: '{{ dockitems_to_persist }}'
 - name: Fix order
   tags: macdock
   shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
-  loop: "{{ dockitems_to_persist }}"
+  loop: '{{ dockitems_to_persist }}'

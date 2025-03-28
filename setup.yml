@@ -35,10 +35,6 @@
       tags: ["brew"]
       when: ansible_distribution == 'MacOSX'
 
-    - role: mas
-      tags: ["mas"]
-      when: ansible_distribution == 'MacOSX'
-
     - role: macdock
       tags: ["macdock"]
       when: ansible_distribution == 'MacOSX'
